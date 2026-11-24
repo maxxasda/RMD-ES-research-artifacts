@@ -1,0 +1,40 @@
+add_parmes:
+- collision
+- min_TTC
+- min_distance
+ans:
+- ego_init_speed_kmh
+- motor_trigger_distance_m
+- motor_target_speed_kmh
+crossoverEta: 20
+crossoverProb: 0.8
+delete_speed_level: []
+mutationEta: 25
+n_gen: 50
+n_obj: 1
+n_offsprings: 50
+n_var: 3
+name: cbnao search for sotif
+note information: 搜索算法数据仿真CBNAO
+objs:
+- target_fit
+pop_size: 50
+scenario_class: CBNAO
+scenario_file: CBNAO.xosc
+search_project_path: /workspace/GQ_SOTIF
+search_save_path: /workspace/GQ_SOTIF/results/CBNAO/2026_07_15_20_18_XDGGA_NO_STAGNATION_sotif_search
+search_type: XDGGA_NO_STAGNATION
+seed: 59
+sim_sleep_time: 15
+simulation_scenario_path: /oasis_data/scenarios
+speed_level:
+- 4
+xl:
+- 20
+- 20
+- 18
+xu:
+- 70
+- 80
+- 42
+

@@ -1,0 +1,39 @@
+add_parmes:
+- collision
+- min_TTC
+ans:
+- dis_to_trigger
+- npc_relative_v
+- ego_absolute_speed
+crossoverEta: 20
+crossoverProb: 0.8
+delete_speed_level: []
+mutationEta: 25
+n_gen: 50
+n_obj: 1
+n_offsprings: 50
+n_var: 3
+name: nsga search for sotif
+note information: 搜索算法数据仿真HighWayCutInScenarioParse
+objs:
+- target_fit
+pop_size: 50
+scenario_class: HighWayCutInScenarioParse
+scenario_file: lane_change_scenario.xosc
+search_project_path: /workspace/GQ_SOTIF
+search_save_path: /workspace/GQ_SOTIF/results/HighWayCutInScenarioParse/2026_05_13_11_11_GCE3S_sotif_search
+search_type: GCE3S
+seed: 72
+sim_sleep_time: 15
+simulation_scenario_path: /oasis_data/scenarios
+speed_level:
+- 4
+xl:
+- 5
+- -15
+- 3
+xu:
+- 80
+- 15
+- 30
+

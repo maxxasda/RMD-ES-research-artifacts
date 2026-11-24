@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Editors and local state
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime outputs and logs (keep the committed released CSVs under results/)
+reproduced_outputs/
+*.log
+*.log.*
+scenario/**/debug.log
+scenario/search_lib/**/debug.log
+
+# Simulation artifacts generated during new runs
+results/**/critical_scenario/
+results/**/sotif_fit_results.csv

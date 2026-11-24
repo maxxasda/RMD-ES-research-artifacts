@@ -1,0 +1,18 @@
+# Example only. The launcher sets SOTIF_PROJECT_PATH to this repository root.
+# Configure exactly one scenario and one algorithm per run.
+project_path: /workspace/GQ_SOTIF
+data_class:
+  - search
+scenario_classes:
+  - CBNAO
+search_algorithms:
+  - XDGGA_FULL
+seed:
+  - 12345
+simulation_scenario_path: /oasis_data/tmp
+sim_task:
+  carla_parames:
+    - carla_port: 2000
+      host: localhost
+      tcs_port: 8880
+      scenario_path: /oasis_data/tmp

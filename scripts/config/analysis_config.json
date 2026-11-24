@@ -1,0 +1,46 @@
+{
+  "scenarios": [
+    "HighWayCutInScenarioParse",
+    "CCRH",
+    "CBNAO"
+  ],
+  "main_methods": {
+    "Random": "_RANDOM_sotif_search",
+    "PSO": "_PSO_sotif_search",
+    "NSGA-II": "_NSGA2_sotif_search",
+    "GCE3S": "_GCE3S_sotif_search",
+    "DGGA": "_DGGA_sotif_search",
+    "RMD-ES": "_ImprovedDGGA_sotif_search"
+  },
+  "ablation_methods": {
+    "RMD-ES": "_ImprovedDGGA_sotif_search",
+    "RMD-ES w/o risk weighting": "_XDGGA_NO_RISK_sotif_search",
+    "RMD-ES w/o risk memory": "_XDGGA_NO_ARCHIVE_sotif_search",
+    "RMD-ES w/o stagnation recovery": "_XDGGA_NO_STAGNATION_sotif_search",
+    "RMD-ES w/o diversity control": "_XDGGA_NO_DIVERSITY_sotif_search"
+  },
+  "all_unique_methods": [
+    "Random", "PSO", "NSGA-II", "GCE3S", "DGGA", "RMD-ES",
+    "RMD-ES w/o risk weighting", "RMD-ES w/o risk memory",
+    "RMD-ES w/o stagnation recovery", "RMD-ES w/o diversity control"
+  ],
+  "convergence_methods": [
+    "Random", "PSO", "NSGA-II", "GCE3S", "DGGA", "RMD-ES"
+  ],
+  "expected_runs_per_scenario_method": 3,
+  "ttc_thresholds_seconds": [1.0, 3.0],
+  "convergence_max_valid_evaluations": 2300,
+  "convergence_start_valid_evaluation": 50,
+  "required_csv_columns": [
+    "step",
+    "target_fit",
+    "collision",
+    "min_TTC"
+  ],
+  "metric_notes": {
+    "collision_rate": "Number of rows with collision=true divided by the number of result rows, in percent.",
+    "target_valid_collision_rate": "Collision=true and target_fit - min_TTC < 0, divided by result rows, in percent. This follows the project's existing analysis rule; it is not a calibrated physical-distance metric.",
+    "target_fit": "Internal search/ranking value; do not compare its absolute scale across scenarios as a calibrated physical risk measure.",
+    "aggregation": "Compute metrics per run, then take the arithmetic mean across the three independent runs. No standard deviations or significance tests are generated."
+  }
+}

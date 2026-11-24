@@ -1,0 +1,50 @@
+add_parmes:
+- collision
+- min_TTC
+- min_distance
+- similarity
+ans:
+- ego_init_speed_kmh
+- ego_to_cutout_distance_m
+- cutout_init_speed_kmh
+- cutout_trigger_distance_m
+- cutout_lanechange_time_s
+- cutout_target_speed_kmh
+crossoverEta: 20
+crossoverProb: 0.8
+delete_speed_level: []
+mutationEta: 25
+n_gen: 50
+n_obj: 1
+n_offsprings: 50
+n_var: 6
+name: ccrh search for sotif
+note information: 搜索算法数据仿真CCRH
+objs:
+- target_fit
+pop_size: 50
+scenario_class: CCRH
+scenario_file: CCRH.xosc
+search_project_path: /workspace/GQ_SOTIF
+search_save_path: /workspace/GQ_SOTIF/results/CCRH/2026_05_04_19_02_DGGA_sotif_search
+search_type: DGGA
+seed: 20
+sim_sleep_time: 15
+simulation_scenario_path: /oasis_data/scenarios
+speed_level:
+- 4
+xl:
+- 60
+- 20
+- 60
+- 10
+- 1
+- 60
+xu:
+- 120
+- 90
+- 120
+- 80
+- 5
+- 120
+

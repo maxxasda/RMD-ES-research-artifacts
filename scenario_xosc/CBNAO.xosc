@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<OpenSCENARIO>
+	<FileHeader revMajor="1" revMinor="0" date="2026-05-19T16:38:59" description="CBNAO" author="oasis" scenario_type="1" />
+	<CatalogLocations />
+	<VariableDeclarations />
+	<RoadNetwork>
+		<LogicFile filepath="urban_2km_4lanes_intersection_w3_5.xodr" />
+	</RoadNetwork>
+	<Entities>
+		<ScenarioObject name="Ego_001">
+			<Vehicle name="vehicle.synkrotron.democar" vehicleCategory="car">
+				<BoundingBox>
+					<Center x="1.4" y="0" z="0.75" />
+					<Dimensions width="2.55" length="9.16" height="3.9" />
+				</BoundingBox>
+				<Performance maxSpeed="60" maxAcceleration="5.1" maxDeceleration="8" />
+				<Axles>
+					<FrontAxle maxSteering="1.22" wheelDiameter="0.7" trackWidth="2.1" positionX="2.8" positionZ="0.35" />
+					<RearAxle maxSteering="1.22" wheelDiameter="0.7" trackWidth="2.1" positionX="2.8" positionZ="0.35" />
+				</Axles>
+			</Vehicle>
+			<ObjectController>
+				<Controller name="DefaultDriver">
+					<Properties>
+						<Property name="init_speed_holding" value="true" />
+					</Properties>
+				</Controller>
+			</ObjectController>
+		</ScenarioObject>
+		<ScenarioObject name="vehicle_562">
+			<Vehicle name="vehicle.synkrotron.nio_es8" vehicleCategory="car">
+				<BoundingBox>
+					<Center x="0" y="0" z="0.86932" />
+					<Dimensions width="4.98" length="2.30" height="1.74" />
+				</BoundingBox>
+				<Performance maxSpeed="60" maxAcceleration="5.1" maxDeceleration="8" />
+				<Axles>
+					<FrontAxle maxSteering="1.22" wheelDiameter="0.7" trackWidth="2.1" positionX="2.8" positionZ="0.35" />
+					<RearAxle maxSteering="1.22" wheelDiameter="0.7" trackWidth="2.1" positionX="2.8" positionZ="0.35" />
+				</Axles>
+			</Vehicle>
+			<ObjectController>
+				<Controller name="NoDriver">
+					<Properties>
+						<Property name="init_speed_holding" value="false" />
+					</Properties>
+				</Controller>
+			</ObjectController>
+		</ScenarioObject>
+		<ScenarioObject name="vehicle_235">
+			<Vehicle name="vehicle.synkrotron.byd_qin" vehicleCategory="car">
+				<BoundingBox>
+					<Center x="0.0" y="0.0" z="0.79565" />
+					<Dimensions width="1.93253" length="4.79421" height="1.5913" />
+				</BoundingBox>
+				<Performance maxSpeed="69.444" maxAcceleration="8.17" maxDeceleration="8" />
+				<Axles>
+					<FrontAxle maxSteering="1.2" wheelDiameter="0.74" trackWidth="2.2" positionX="2.8" positionZ="0.37" />
+					<RearAxle maxSteering="1.2" wheelDiameter="0.74" trackWidth="2.2" positionX="2.8" positionZ="0.37" />
+				</Axles>
+			</Vehicle>
+			<ObjectController>
+				<Controller name="NoDriver">
+					<Properties>
+						<Property name="init_speed_holding" value="false" />
+					</Properties>
+				</Controller>
+			</ObjectController>
+		</ScenarioObject>
+		<ScenarioObject name="vehicle_535">
+			<Vehicle name="vehicle.synkrotron.taxi01" vehicleCategory="car">
+				<BoundingBox>
+					<Center x="0.0" y="0.0" z="0.82972" />
+					<Dimensions width="1.87847" length="4.85653" height="1.65944" />
+				</BoundingBox>
+				<Performance maxSpeed="69.444" maxAcceleration="8.17" maxDeceleration="8" />
+				<Axles>
+					<FrontAxle maxSteering="1.2" wheelDiameter="0.74" trackWidth="2.2" positionX="2.8" positionZ="0.37" />
+					<RearAxle maxSteering="1.2" wheelDiameter="0.74" trackWidth="2.2" positionX="2.8" positionZ="0.37" />
+				</Axles>
+			</Vehicle>
+			<ObjectController>
+				<Controller name="NoDriver">
+					<Properties>
+						<Property name="init_speed_holding" value="false" />
+					</Properties>
+				</Controller>
+			</ObjectController>
+		</ScenarioObject>
+		<ScenarioObject name="vehicle_362">
+			<Vehicle name="vehicle.synkrotron.motor01" vehicleCategory="motorbike">
+				<BoundingBox>
+					<Center x="0" y="0" z="0.85738" />
+					<Dimensions width="0.679808" length="1.8839" height="1.79829" />
+				</BoundingBox>
+				<Performance maxSpeed="63" maxAcceleration="4.7" maxDeceleration="8" />
+				<Axles>
+					<FrontAxle maxSteering="1.22" wheelDiameter="0.74" trackWidth="2.04" positionX="3.0" positionZ="0.37" />
+					<RearAxle maxSteering="1.22" wheelDiameter="0.74" trackWidth="2.04" positionX="3.0" positionZ="0.37" />
+				</Axles>
+			</Vehicle>
+			<ObjectController>
+				<Controller name="DefaultDriver">
+					<Properties>
+						<Property name="init_speed_holding" value="false" />
+					</Properties>
+				</Controller>
+			</ObjectController>
+		</ScenarioObject>
+	</Entities>
+	<Storyboard>
+		<Init>
+			<Actions>
+				<GlobalAction>
+					<EnvironmentAction>
+						<Environment name="Environment1">
+							<TimeOfDay animation="true" dateTime="2020-09-23T08:20:00" />
+							<Weather cloudState="free">
+								<Sun intensity="50000.0" azimuth="2.792526803190927" elevation="0.6108652381980153" environment_lighting_gain="0" />
+								<Fog visualRange="10000" />
+								<Precipitation precipitationType="dry" intensity="0" precipitation_deposits="0" />
+								<Wind intensity="5" />
+								<Snow intensity="0" snow_accumulation="0" />
+								<Dust intensity="0" />
+							</Weather>
+							<RoadCondition frictionScaleFactor="1.0" />
+						</Environment>
+					</EnvironmentAction>
+				</GlobalAction>
+				<Private entityRef="Ego_001">
+					<PrivateAction>
+						<LongitudinalAction>
+							<SpeedAction>
+								<SpeedActionDynamics dynamicsShape="step" value="0" dynamicsDimension="time" />
+								<SpeedActionTarget>
+									<AbsoluteTargetSpeed value="13.889" />
+								</SpeedActionTarget>
+							</SpeedAction>
+						</LongitudinalAction>
+					</PrivateAction>
+					<PrivateAction>
+						<TeleportAction>
+							<Position>
+								<WorldPosition x="-5.482" y="-53.022" z="0" h="1.5724369362917712" p="0.0" r="0.0" />
+							</Position>
+						</TeleportAction>
+					</PrivateAction>
+				</Private>
+				<Private entityRef="vehicle_562">
+					<PrivateAction>
+						<LongitudinalAction>
+							<SpeedAction>
+								<SpeedActionDynamics dynamicsShape="step" value="0" dynamicsDimension="time" />
+								<SpeedActionTarget>
+									<AbsoluteTargetSpeed value="0" />
+								</SpeedActionTarget>
+							</SpeedAction>
+						</LongitudinalAction>
+					</PrivateAction>
+					<PrivateAction>
+						<TeleportAction>
+							<Position>
+								<WorldPosition x="-2.5" y="-20.232" z="0" h="1.5724369362917712" p="0.0" r="0.0" />
+							</Position>
+						</TeleportAction>
+					</PrivateAction>
+				</Private>
+				<Private entityRef="vehicle_235">
+					<PrivateAction>
+						<LongitudinalAction>
+							<SpeedAction>
+								<SpeedActionDynamics dynamicsShape="step" value="0" dynamicsDimension="time" />
+								<SpeedActionTarget>
+									<AbsoluteTargetSpeed value="0" />
+								</SpeedActionTarget>
+							</SpeedAction>
+						</LongitudinalAction>
+					</PrivateAction>
+					<PrivateAction>
+						<TeleportAction>
+							<Position>
+								<WorldPosition x="-2.38" y="-24.942" z="0" h="1.5724369362917712" p="0.0" r="0.0" />
+							</Position>
+						</TeleportAction>
+					</PrivateAction>
+				</Private>
+				<Private entityRef="vehicle_535">
+					<PrivateAction>
+						<LongitudinalAction>
+							<SpeedAction>
+								<SpeedActionDynamics dynamicsShape="step" value="0" dynamicsDimension="time" />
+								<SpeedActionTarget>
+									<AbsoluteTargetSpeed value="0" />
+								</SpeedActionTarget>
+							</SpeedAction>
+						</LongitudinalAction>
+					</PrivateAction>
+					<PrivateAction>
+						<TeleportAction>
+							<Position>
+								<WorldPosition x="-2.259" y="-29.471" z="0" h="1.5724369362917712" p="0.0" r="0.0" />
+							</Position>
+						</TeleportAction>
+					</PrivateAction>
+				</Private>
+				<Private entityRef="vehicle_362">
+					<PrivateAction>
+						<LongitudinalAction>
+							<SpeedAction>
+								<SpeedActionDynamics dynamicsShape="step" value="0" dynamicsDimension="time" />
+								<SpeedActionTarget>
+									<AbsoluteTargetSpeed value="0" />
+								</SpeedActionTarget>
+							</SpeedAction>
+						</LongitudinalAction>
+					</PrivateAction>
+					<PrivateAction>
+						<TeleportAction>
+							<Position>
+								<WorldPosition x="0.483" y="-14.336" z="0" h="3.141592653589793" p="0.0" r="0.0" />
+							</Position>
+						</TeleportAction>
+					</PrivateAction>
+				</Private>
+			</Actions>
+		</Init>
+		<Story name="MyStory">
+			<Act name="Act1">
+				<ManeuverGroup maximumExecutionCount="1" name="ManeuverGroup1">
+					<Actors selectTriggeringEntities="false">
+						<EntityRef entityRef="Ego_001" />
+					</Actors>
+					<Maneuver name="Maneuver1">
+						<Event name="Ego_001_event_outside" priority="parallel">
+							<Action name="A1ofEgo_001_event_outside">
+								<PrivateAction>
+									<RoutingAction>
+										<AcquirePositionAction>
+											<Position>
+												<WorldPosition x="-5.337" y="32.219" z="0" h="1.5724369362917712" p="0.0" r="0.0" />
+											</Position>
+										</AcquirePositionAction>
+									</RoutingAction>
+								</PrivateAction>
+							</Action>
+							<StartTrigger>
+								<ConditionGroup>
+									<Condition name="C1ofCG1ofEgo_001_event_outside" delay="0" conditionEdge="rising">
+										<ByValueCondition>
+											<SimulationTimeCondition value="0" rule="greaterThan" />
+										</ByValueCondition>
+									</Condition>
+								</ConditionGroup>
+							</StartTrigger>
+						</Event>
+					</Maneuver>
+				</ManeuverGroup>
+				<ManeuverGroup maximumExecutionCount="1" name="ManeuverGroup2">
+					<Actors selectTriggeringEntities="false">
+						<EntityRef entityRef="vehicle_362" />
+					</Actors>
+					<Maneuver name="Maneuver2">
+						<Event name="vehicle_362_event_UJaHkB" priority="parallel">
+							<Action name="vehicle_362_action_B9LXke">
+								<PrivateAction>
+									<LongitudinalAction>
+										<SpeedAction>
+											<SpeedActionDynamics dynamicsShape="linear" value="2" dynamicsDimension="time" />
+											<SpeedActionTarget>
+												<AbsoluteTargetSpeed value="8.333" />
+											</SpeedActionTarget>
+										</SpeedAction>
+									</LongitudinalAction>
+								</PrivateAction>
+							</Action>
+							<Action name="vehicle_362_action_J8lGjp">
+								<PrivateAction>
+									<ActivateControllerAction lateral="true" longitudinal="true" />
+								</PrivateAction>
+							</Action>
+							<Action name="vehicle_362_action_sLvAqk">
+								<PrivateAction>
+									<RoutingAction>
+										<AssignRouteAction>
+											<Route closed="false" name="route_hta1B3">
+												<Waypoint routeStrategy="shortest">
+													<Position>
+														<WorldPosition x="-3.334" y="-14.659" z="0" h="0.0" p="0.0" r="0.0" />
+													</Position>
+												</Waypoint>
+												<Waypoint routeStrategy="shortest">
+													<Position>
+														<WorldPosition x="-6.417" y="-14.787" z="0" h="0.0" p="0.0" r="0.0" />
+													</Position>
+												</Waypoint>
+												<Waypoint routeStrategy="shortest">
+													<Position>
+														<WorldPosition x="-10.719" y="-14.787" z="0" h="0.0" p="0.0" r="0.0" />
+													</Position>
+												</Waypoint>
+												<Waypoint routeStrategy="shortest">
+													<Position>
+														<WorldPosition x="-16.178" y="-14.723" z="0" h="0.0" p="0.0" r="0.0" />
+													</Position>
+												</Waypoint>
+											</Route>
+										</AssignRouteAction>
+									</RoutingAction>
+								</PrivateAction>
+							</Action>
+							<StartTrigger>
+								<ConditionGroup>
+									<Condition name="C1ofCG1ofvehicle_362_event_UJaHkB" delay="0" conditionEdge="rising">
+										<ByEntityCondition>
+											<TriggeringEntities triggeringEntitiesRule="any">
+												<EntityRef entityRef="vehicle_362" />
+											</TriggeringEntities>
+											<EntityCondition>
+												<RelativeDistanceCondition entityRef="Ego_001" relativeDistanceType="cartesianDistance" value="30" freespace="false" rule="lessThan" />
+											</EntityCondition>
+										</ByEntityCondition>
+									</Condition>
+								</ConditionGroup>
+							</StartTrigger>
+						</Event>
+					</Maneuver>
+				</ManeuverGroup>
+				<StartTrigger>
+					<ConditionGroup>
+						<Condition name="ActStartCondition" delay="0" conditionEdge="rising">
+							<ByValueCondition>
+								<SimulationTimeCondition value="0" rule="greaterThan" />
+							</ByValueCondition>
+						</Condition>
+					</ConditionGroup>
+				</StartTrigger>
+			</Act>
+		</Story>
+		<StopTrigger>
+			<ConditionGroup>
+				<Condition name="timeout" delay="0" conditionEdge="rising">
+					<ByValueCondition>
+						<SimulationTimeCondition value="120" rule="greaterThan" />
+					</ByValueCondition>
+				</Condition>
+			</ConditionGroup>
+			<ConditionGroup>
+				<Condition name="collision_obstacle_all" delay="0" conditionEdge="rising">
+					<ByEntityCondition>
+						<TriggeringEntities triggeringEntitiesRule="all">
+							<EntityRef entityRef="Ego_001" />
+						</TriggeringEntities>
+						<EntityCondition>
+							<CollisionCondition>
+								<ByType type="miscellaneous" />
+							</CollisionCondition>
+						</EntityCondition>
+					</ByEntityCondition>
+				</Condition>
+			</ConditionGroup>
+			<ConditionGroup>
+				<Condition name="reach_destination_0_all" delay="0" conditionEdge="rising">
+					<ByEntityCondition>
+						<TriggeringEntities triggeringEntitiesRule="all">
+							<EntityRef entityRef="Ego_001" />
+						</TriggeringEntities>
+						<EntityCondition>
+							<ReachPositionCondition tolerance="8">
+								<Position>
+									<WorldPosition x="-5.337" y="32.219" z="0" h="1.5724369362917712" p="0.0" r="0.0" />
+								</Position>
+							</ReachPositionCondition>
+						</EntityCondition>
+					</ByEntityCondition>
+				</Condition>
+			</ConditionGroup>
+		</StopTrigger>
+	</Storyboard>
+</OpenSCENARIO>
